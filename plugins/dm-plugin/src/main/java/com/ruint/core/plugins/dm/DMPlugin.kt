@@ -21,16 +21,12 @@ import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.io.File
 
-/**
- * @author jady
- * @since 2021-12-15, 周三, 0:5
- * email: 1257984872@qq.com
- */
 @Suppress("UnstableApiUsage")
 class DMPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.run {
             plugins.all {
+                configureCommonPlugin()
                 when (this) {
                     is LibraryPlugin -> configureLibraryPlugin()
                     is AppPlugin -> configureAppPlugin()
@@ -41,7 +37,7 @@ class DMPlugin : Plugin<Project> {
 
     private fun Project.configureLibraryPlugin() {
         extensions.getByType<LibraryExtension>().run {
-            configCommonExtension(this@configureLibraryPlugin)
+            configureCommonExtension(this@configureLibraryPlugin)
             defaultConfig {
                 consumerProguardFiles("proguard-rules.pro")
                 proguardFiles("proguard-rules.pro")
@@ -51,7 +47,7 @@ class DMPlugin : Plugin<Project> {
 
     private fun Project.configureAppPlugin() {
         extensions.getByType<BaseAppModuleExtension>().run {
-            configCommonExtension(this@configureAppPlugin)
+            configureCommonExtension(this@configureAppPlugin)
             defaultConfig.proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -65,7 +61,7 @@ class DMPlugin : Plugin<Project> {
         }
     }
 
-    private fun BaseExtension.configCommonExtension(project: Project) {
+    private fun BaseExtension.configureCommonExtension(project: Project) {
         val useCompose = null != project.findProperty("composeCompiler")
         setCompileSdkVersion(project.findProperty("compileSdk")?.toString()?.toInt() ?: 33)
 
@@ -134,6 +130,8 @@ class DMPlugin : Plugin<Project> {
             }
         }
 
+
+
         project.tasks.withType<KotlinCompile>().configureEach {
             kotlinOptions {
                 jvmTarget = project.property("javaVersion").toString()
@@ -150,7 +148,17 @@ class DMPlugin : Plugin<Project> {
             }
         }
 
+    }
+
+    private fun Project.configureCommonPlugin() {
+        plugins.apply("org.jetbrains.kotlin.android")
+        plugins.apply("io.github.ruintazila.dm-plugin")
 
     }
+
+    private fun Project.configureCommonDependencies() {
+        dependencies.add("api", "")
+    }
+
 
 }
