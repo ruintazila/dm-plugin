@@ -46,7 +46,7 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 groupId = "com.github.ruintazila"
                 artifactId = "dm-plugin"
-                version = "0.1.7"
+                version = "0.1.8"
             }
         }
     }
