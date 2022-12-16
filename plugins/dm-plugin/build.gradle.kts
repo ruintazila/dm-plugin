@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "io.github.ruintazila"
-version = "0.1.6"
+version = "0.1.7"
 
 
 gradlePlugin {
@@ -36,6 +36,18 @@ publishing {
         maven {
             setUrl("../../local-repo")
             name = "localRepo"
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("goose"){
+                groupId = "io.github.ruintazila"
+                artifactId = "dm-plugin"
+                version = "0.1.7"
+            }
         }
     }
 }

@@ -3,7 +3,7 @@
   "component": {
     "group": "io.github.ruintazila",
     "module": "dm-plugin",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -27,13 +27,13 @@
       },
       "files": [
         {
-          "name": "dm-plugin-0.1.6.jar",
-          "url": "dm-plugin-0.1.6.jar",
+          "name": "dm-plugin-0.1.7.jar",
+          "url": "dm-plugin-0.1.7.jar",
           "size": 29707,
-          "sha512": "953ee5fbb34f19bf75583ad48066acc97efb2ed5096fcb888e0af8b73b171fe41c6ae0ce695df1f5a581a43cb96e6169b973be3c5df71e7c0336103c9e175788",
-          "sha256": "4e128d23da043965849b7224e9ef9ca956681bc1b6dc9255ee1cd3603e97ea90",
-          "sha1": "e809cef35771a56b28aebab6f551d0bc52f102be",
-          "md5": "5ae04a46b497164eb961911dc1fa7157"
+          "sha512": "855b164557f4fc46fbfbda48cff45aa39d854e57428f6294ed52b0d99abb9f6e868fca74617c6634eb4be483bc1b97a57851c83234154275a3f8a7027ee89ba5",
+          "sha256": "c0a1bd4d4c20a0890eb5ad13f8b55e5f4bcf6f8b63b4f71ce331e7b32fac373f",
+          "sha1": "c4f92e5fd41206b9df0bcd9824eedc97f9b7d219",
+          "md5": "7dd03bbbb4031624c540af7feb1b3bdf"
         }
       ]
     },
@@ -80,13 +80,13 @@
       ],
       "files": [
         {
-          "name": "dm-plugin-0.1.6.jar",
-          "url": "dm-plugin-0.1.6.jar",
+          "name": "dm-plugin-0.1.7.jar",
+          "url": "dm-plugin-0.1.7.jar",
           "size": 29707,
-          "sha512": "953ee5fbb34f19bf75583ad48066acc97efb2ed5096fcb888e0af8b73b171fe41c6ae0ce695df1f5a581a43cb96e6169b973be3c5df71e7c0336103c9e175788",
-          "sha256": "4e128d23da043965849b7224e9ef9ca956681bc1b6dc9255ee1cd3603e97ea90",
-          "sha1": "e809cef35771a56b28aebab6f551d0bc52f102be",
-          "md5": "5ae04a46b497164eb961911dc1fa7157"
+          "sha512": "855b164557f4fc46fbfbda48cff45aa39d854e57428f6294ed52b0d99abb9f6e868fca74617c6634eb4be483bc1b97a57851c83234154275a3f8a7027ee89ba5",
+          "sha256": "c0a1bd4d4c20a0890eb5ad13f8b55e5f4bcf6f8b63b4f71ce331e7b32fac373f",
+          "sha1": "c4f92e5fd41206b9df0bcd9824eedc97f9b7d219",
+          "md5": "7dd03bbbb4031624c540af7feb1b3bdf"
         }
       ]
     },
@@ -100,13 +100,13 @@
       },
       "files": [
         {
-          "name": "dm-plugin-0.1.6-javadoc.jar",
-          "url": "dm-plugin-0.1.6-javadoc.jar",
+          "name": "dm-plugin-0.1.7-javadoc.jar",
+          "url": "dm-plugin-0.1.7-javadoc.jar",
           "size": 261,
-          "sha512": "8af8df948cabe6b6019708a42a78f8694dbe2ac99ce5a88ab35a57ef4f99e3e3d3f35fbe8836dd4533462bf2c297ddabb9220c75c3f439f2589d846ceae3ad70",
-          "sha256": "42951c8ae52427159a4069c96a83a86da9d87abca7e565d1a24871f7cec7eb00",
-          "sha1": "65cb72e999df8e6cedd622c70034e9364304454e",
-          "md5": "b7ba2f7fe1f32804363e2c4023d8ee60"
+          "sha512": "8b55092cb9a01330ff11e943b51ad02a8c30e2210cab5465c98ca26f4395ec364be2c9b1860651228544d297487c3d913fd9b74b8aa55e72129b808f43fe8026",
+          "sha256": "b30700a383fb3624b8ec6ae9e0ff79459a73dcd344721184dda9d2fa85230a1c",
+          "sha1": "487b63cc7d88308e75a3aa2dbea71071fc0cf5d5",
+          "md5": "9315066fc1102d8d713b4f11746043c8"
         }
       ]
     },
@@ -120,13 +120,13 @@
       },
       "files": [
         {
-          "name": "dm-plugin-0.1.6-sources.jar",
-          "url": "dm-plugin-0.1.6-sources.jar",
+          "name": "dm-plugin-0.1.7-sources.jar",
+          "url": "dm-plugin-0.1.7-sources.jar",
           "size": 2337,
-          "sha512": "b8c5455c1d83cdc4b204b4f418fc9bbdf55cb7b0e423a3d3b5e8f08586da67d0c7ff1a10630e661c149381f45dfcc03890e4726c07f47bd7b8fd567d283a9c94",
-          "sha256": "a60d211709d82cbb3b60fd8a006b77625402bd48657dc236d88daefb2798f074",
-          "sha1": "8806eac91a2e70d5ebaa02265f6fce34e43c1e15",
-          "md5": "9daa498973a6cf3936a67e89ccc73e41"
+          "sha512": "ce1031415a0a343ff3db931301adff441ca221f3735365b46b92e7ccfc7072cd087197b4aeef1d8f111a666421e7a6280d91b1eb074bef0416781575da32d0ce",
+          "sha256": "02ad8effd6157b9ba6ac095663d54794afe75c26cb5c1066fb2c16e0e59ea451",
+          "sha1": "50859d5be329f6d303d669bcfffc9675a5fcaeff",
+          "md5": "db3d010015b71ce19474aad5f3f741c8"
         }
       ]
     }

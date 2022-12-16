@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.ruintazila.dm-plugin</groupId>
   <artifactId>io.github.ruintazila.dm-plugin.gradle.plugin</artifactId>
-  <version>0.1.6</version>
+  <version>0.1.7</version>
   <packaging>pom</packaging>
   <name>Dependency Management Plugin for Android</name>
   <description>A plugin helps you to manage android extensions</description>
@@ -11,7 +11,7 @@
     <dependency>
       <groupId>io.github.ruintazila</groupId>
       <artifactId>dm-plugin</artifactId>
-      <version>0.1.6</version>
+      <version>0.1.7</version>
     </dependency>
   </dependencies>
 </project>
