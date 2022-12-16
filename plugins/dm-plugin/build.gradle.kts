@@ -20,7 +20,7 @@ gradlePlugin {
             implementationClass = "com.ruint.core.plugins.dm.DMPlugin"
             displayName = "Dependency Management Plugin for Android"
             description = "A plugin helps you to manage android extensions"
-            tags.set(listOf("android", "ruinT", "plugin", "dm-plugin", "core-lib", "ruintazila"))
+            tags.set(listOf("android", "ruinT", "dm-plugin", "core-lib", "ruintazila"))
         }
     }
 }
