@@ -23,10 +23,10 @@ import java.io.File
 
 @Suppress("UnstableApiUsage")
 class DMPlugin : Plugin<Project> {
+    private var useCompose = false
     override fun apply(project: Project) {
         project.run {
             plugins.all {
-                configureCommonPlugin()
                 when (this) {
                     is LibraryPlugin -> configureLibraryPlugin()
                     is AppPlugin -> configureAppPlugin()
@@ -62,7 +62,7 @@ class DMPlugin : Plugin<Project> {
     }
 
     private fun BaseExtension.configureCommonExtension(project: Project) {
-        val useCompose = null != project.findProperty("composeCompiler")
+        useCompose = null != project.findProperty("composeCompiler")
         setCompileSdkVersion(project.findProperty("compileSdk")?.toString()?.toInt() ?: 33)
 
         defaultConfig {
@@ -150,15 +150,18 @@ class DMPlugin : Plugin<Project> {
 
     }
 
-    private fun Project.configureCommonPlugin() {
+ /*   private fun Project.configureCommonPlugin() {
         plugins.apply("org.jetbrains.kotlin.android")
         plugins.apply("io.github.ruintazila.dm-plugin")
-
     }
 
     private fun Project.configureCommonDependencies() {
-        dependencies.add("api", "")
+        //dependencies.add("api", "")
     }
 
+    private fun Project.configureComposeDependencies(){
+        if (useCompose){
+        }
+    }*/
 
 }

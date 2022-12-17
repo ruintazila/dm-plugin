@@ -4,12 +4,11 @@
 plugins {
     `kotlin-dsl`
     `maven-publish`
-    id("com.gradle.plugin-publish") version "1.1.0"
+    alias(libs.plugins.gradle.publish)
 }
 
 group = "io.github.ruintazila"
-version = "0.1.81"
-
+version = "0.1.9"
 
 gradlePlugin {
     website.set("https://github.com/ruintazila/dm-plugin")
@@ -46,20 +45,21 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 groupId = "com.github.ruintazila"
                 artifactId = "dm-plugin"
-                version = "0.1.81"
+                version = "0.1.9"
                 from(components.getByName("java"))
             }
         }
     }
 }
 
+@Suppress("DSL_SCOPE_VIOLATION")
 dependencies {
-    //    implementation(libs.android.gradlePlugin)
-    //    implementation(libs.kotlin.gradlePlugin)
-    //    implementation(libs.kotlin.stdlib)
-    //    implementation(libs.kotlin.reflect)
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
-    implementation("com.android.tools.build:gradle:7.3.1")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.20")
+        implementation(libs.android.gradlePlugin)
+        implementation(libs.kotlin.gradlePlugin)
+        implementation(libs.kotlin.stdlib)
+        implementation(libs.kotlin.reflect)
+//    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
+//    implementation("com.android.tools.build:gradle:7.3.1")
+//    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20")
+//    implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.20")
 }
