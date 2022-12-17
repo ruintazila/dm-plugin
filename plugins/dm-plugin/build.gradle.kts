@@ -4,11 +4,11 @@
 plugins {
     `kotlin-dsl`
     `maven-publish`
-    alias(libs.plugins.gradle.publish)
+    id("com.gradle.plugin-publish") version "1.1.0"
 }
 
 group = "io.github.ruintazila"
-version = "0.1.8"
+version = "0.1.81"
 
 
 gradlePlugin {
@@ -46,15 +46,20 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 groupId = "com.github.ruintazila"
                 artifactId = "dm-plugin"
-                version = "0.1.8"
+                version = "0.1.81"
+                from(components.getByName("java"))
             }
         }
     }
 }
 
 dependencies {
-    implementation(libs.android.gradlePlugin)
-    implementation(libs.kotlin.gradlePlugin)
-    implementation(libs.kotlin.stdlib)
-    implementation(libs.kotlin.reflect)
+    //    implementation(libs.android.gradlePlugin)
+    //    implementation(libs.kotlin.gradlePlugin)
+    //    implementation(libs.kotlin.stdlib)
+    //    implementation(libs.kotlin.reflect)
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
+    implementation("com.android.tools.build:gradle:7.3.1")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.20")
 }
